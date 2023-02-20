@@ -1,0 +1,33 @@
+.navbar {
+  background-color: black;
+  color: #fff;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  gap: 8%;
+}
+.navbar ul h2 {
+  font-size: 35px;
+  cursor: default;
+  transition: 0.6s;
+}
+.navbar ul h2:hover {
+  color: crimson;
+}
+.navbar ul li {
+  padding: 30px;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  transition: 0.6s;
+}
+.navbar ul li a:hover {
+  color: crimson;
+}
+
+/*# sourceMappingURL=styles.css.map */
