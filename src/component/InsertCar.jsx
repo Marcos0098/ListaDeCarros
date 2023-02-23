@@ -10,6 +10,9 @@ const InsertCar = () => {
     ano: '',
     preco: ''
   })
+
+  const [countButton, setCountButton] = useState(0)
+
  /*IMPORTANTE: PARA REALIZAR O TESTE DO APP, ENTRE NO SITE https://crudcrud.com E TROQUE O LINK DA API NO ARQUIVO {provider.jsx} PARA O GERADO NO SEU NAVEGADOR
  FEITO ISSO O PROGRAMA FUNCIONARÁ CORRETAMENTE*/
   const fetchData = () =>{
@@ -40,12 +43,32 @@ const InsertCar = () => {
     setCarObj((prev) => {
       const newArr = {...prev, [name]: value}
       return newArr;
-      })
-      
+      })   
   }
 
-  console.log(carObj)
+  const activebutton = () => {
 
+    let checkedButton = 0
+
+    if(carObj.modelo){
+      checkedButton += 1;
+    }
+    
+    if(carObj.ano){
+      checkedButton += 1;
+    }
+    
+    if(carObj.preco){
+      checkedButton += 1;
+    }
+
+    return checkedButton;
+  }
+
+
+
+  console.log(carObj)
+  
   return (
     <>
     <div className='insertCar'>
@@ -64,7 +87,7 @@ const InsertCar = () => {
               <input name='preco' type="number" value={carObj.preco} onChange={handleChange}/>
             </div>
             <div className="save-data">
-              <button onClick={fetchData}>Salvar Dados</button>
+              <button onClick={fetchData} disabled={activebutton() !== 3}>Salvar Dados</button>
             </div>
             
             

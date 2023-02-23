@@ -5,7 +5,16 @@ const TableCar = () => {
   return (
     <>
     <div className='tableCar'>
-    Table car Here
+      <table>
+        <thead>
+          <tr>
+            <td>Modelo</td>
+            <td>Ano</td>
+            <td>Preço</td>
+          </tr>
+        </thead>
+      </table>
+
     </div>
     </>
   )

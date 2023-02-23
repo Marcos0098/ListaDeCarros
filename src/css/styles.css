@@ -44,16 +44,21 @@
   justify-content: center;
   gap: 30px;
 }
+.App .home h2 {
+  padding: 0 10%;
+}
 .App .home .p {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 5px;
+  padding: 0 10%;
 }
 .App .home .p p {
-  font-size: 20px;
+  font-size: 140%;
 }
 .App .home .p img {
-  width: 100px;
+  width: 10%;
   color: #eee;
 }
 .App footer {
@@ -94,7 +99,7 @@
 }
 .App .insertCar .formulario {
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
@@ -122,7 +127,32 @@
   margin-top: 20px;
 }
 .App .insertCar .formulario .save-data button {
-  padding: 3px;
+  box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 6px;
+  border: 1px solid #84bbf3;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.App .insertCar .formulario .save-data button:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color: #378de5;
+}
+.App .insertCar .formulario .save-data button:active {
+  position: relative;
+  top: 1px;
+}
+.App .insertCar .formulario .save-data button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /*# sourceMappingURL=styles.css.map */
