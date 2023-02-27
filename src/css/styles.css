@@ -78,7 +78,7 @@
   font-size: 20px;
 }
 .App footer a {
-  text-decoration: none;
+  text-decoration: 1.5px underline;
   color: #eee;
   font-size: 20px;
 }
@@ -153,6 +153,61 @@
 .App .insertCar .formulario .save-data button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+.App .tableCar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid gray;
+  margin: 5% 10%;
+  padding: 30px;
+  border-radius: 5px;
+}
+.App .tableCar table {
+  margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 24px;
+}
+.App .tableCar table thead tr {
+  border-bottom: 3px solid #3b3b3b;
+}
+.App .tableCar table thead tr td {
+  padding: 0 10px;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+.App .tableCar table tbody tr {
+  border: 3px solid #ccc;
+}
+.App .tableCar table tbody tr td {
+  text-align: left;
+  padding: 20px 10px;
+  text-transform: capitalize;
+}
+.App .tableCar table tbody tr td button {
+  padding: 5px 10px;
+  box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 6px;
+  border: 1px solid #84bbf3;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.App .tableCar table tbody tr td button:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color: #378de5;
+}
+.App .tableCar table tbody tr td button:active {
+  position: relative;
+  top: 1px;
 }
 
 /*# sourceMappingURL=styles.css.map */

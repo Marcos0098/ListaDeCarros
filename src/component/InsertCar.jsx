@@ -2,16 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import { api } from '../provider'
 
-
-
 const InsertCar = () => {
   const [carObj, setCarObj] = useState({
     modelo: '',
     ano: '',
     preco: ''
   })
-
-  const [countButton, setCountButton] = useState(0)
 
  /*IMPORTANTE: PARA REALIZAR O TESTE DO APP, ENTRE NO SITE https://crudcrud.com E TROQUE O LINK DA API NO ARQUIVO {provider.jsx} PARA O GERADO NO SEU NAVEGADOR
  FEITO ISSO O PROGRAMA FUNCIONARÁ CORRETAMENTE*/
