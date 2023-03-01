@@ -16,10 +16,7 @@ const TableCar = () => {
   
   const handleDelete = (index, id) => {
     const newArr = Array.from(carData)
-    api.delete(`/carros/${id}`).then((response)).catch((error))
-    newArr.splice(index,1)
-
-    setCarData(newArr)
+    api.delete(`/carros/${id}`).then((response) => setCarData(response.data._id == id))
 
   }
   console.log(carData)
@@ -37,7 +34,7 @@ const TableCar = () => {
         </thead>
 
         <tbody>
-          {carData.map((obj,index) => { 
+          {carData && carData.map((obj,index) => { 
           return(
             <tr key={obj._id}>
               <td>{obj.modelo}</td>
