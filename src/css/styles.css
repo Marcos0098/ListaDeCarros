@@ -1,6 +1,7 @@
 .App {
-  height: 100vh;
-  background-color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .App .navbar {
   background-color: black;
@@ -35,12 +36,13 @@
   position: relative;
   top: 1px;
 }
-.App .hamburguer, .App .burguerDisable, .App .burguerEnable {
-  display: none;
+.App .hamburguer, .App .burguerDisable {
+  height: 0;
+  visibility: hidden;
 }
 .App .home {
   width: 100%;
-  height: 85.7%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,41 +66,16 @@
   width: 10%;
   color: #eee;
 }
-.App footer {
-  width: 100%;
-  height: 5%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  color: #fff;
-  gap: 20px;
-}
-.App footer p {
-  font-size: 20px;
-}
-.App footer a {
-  text-decoration: 1.5px underline;
-  color: #eee;
-  font-size: 20px;
-}
-.App footer img {
-  width: 30px;
-}
 .App .insertCar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 100%;
+  flex: 1;
 }
 .App .insertCar h2 {
   font-size: 32px;
-  margin-top: 12%;
 }
 .App .insertCar .formulario {
   flex-direction: column;
@@ -159,6 +136,7 @@
 }
 .App .tableCar {
   width: 50%;
+  flex: 1;
   display: flex;
   justify-content: center;
   border: 1px solid gray;
@@ -212,17 +190,34 @@
   position: relative;
   top: 1px;
 }
+.App footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  gap: 20px;
+}
+.App footer img {
+  width: 50px;
+}
+.App .about {
+  flex: 1;
+}
 
 @media screen and (max-width: 768px) {
   .navbar {
     display: none;
   }
   .hamburguer {
+    visibility: visible !important;
     width: 100%;
     display: flex !important;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px !important;
     background-color: black;
     color: #fff;
   }
@@ -238,8 +233,8 @@
   .burguerDisable {
     display: flex !important;
     justify-content: center;
-    height: 0%;
     width: 100%;
+    height: 0%;
     overflow: hidden;
     transition: 0.6s ease;
     background-color: black;
@@ -260,10 +255,11 @@
     color: #fff;
   }
   .burguerEnable {
+    visibility: visible;
     display: flex !important;
     justify-content: center;
     width: 100%;
-    height: 21.5%;
+    height: 200px !important;
     background-color: black;
     transition: 0.6s ease;
     overflow: hidden;
@@ -281,6 +277,46 @@
     text-decoration: none;
     font-size: 24px;
     color: #fff;
+  }
+  .home h2 {
+    font-size: 22px;
+    text-align: center;
+    padding: 0 2% !important;
+  }
+  .home .p {
+    padding: 0 2% !important;
+  }
+  .home .p img {
+    width: 75px !important;
+  }
+  .home .p p {
+    text-align: center;
+    font-size: 16px !important;
+  }
+  footer {
+    padding: 10px !important;
+    text-align: justify;
+  }
+  footer p {
+    font-size: 14px !important;
+  }
+  footer p a {
+    font-size: 14px !important;
+  }
+  .insertCar h2 {
+    font-size: 22px !important;
+    padding: 0px 20px;
+    text-align: center;
+  }
+  .insertCar .formulario {
+    width: 75% !important;
+  }
+  .tableCar {
+    width: 90% !important;
+    margin: 5% 5% !important;
+  }
+  .tableCar tbody tr td {
+    font-size: 18px !important;
   }
 }
 

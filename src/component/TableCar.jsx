@@ -1,10 +1,43 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { api } from '../provider'
-import {AiFillDelete} from 'react-icons/ai'
+import { AiFillDelete } from 'react-icons/ai'
+
 const TableCar = () => {
 
-  const [carData, setCarData] = useState([])
+  const [carData, setCarData] = useState([{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},
+  {modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'},{modelo: 'renault',
+  ano: '2022',
+  preco: '20002'}]
+  )
 
   const fetchData = () => {
     api.get('/carros').then((response) => setCarData(response.data))
@@ -14,8 +47,7 @@ const TableCar = () => {
     fetchData();
   }, [])
   
-  const handleDelete = (index, id) => {
-    const newArr = Array.from(carData)
+  const handleDelete = (id) => {
     api.delete(`/carros/${id}`).then((response) => setCarData(response.data._id == id))
 
   }
