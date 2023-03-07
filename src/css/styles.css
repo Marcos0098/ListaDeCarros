@@ -200,11 +200,26 @@
   padding: 10px;
   gap: 20px;
 }
+.App footer p a {
+  color: white;
+}
 .App footer img {
   width: 50px;
 }
 .App .about {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+  gap: 20px;
+}
+.App .about h2 {
+  text-align: center;
+}
+.App .about h4 {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

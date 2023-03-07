@@ -5,39 +5,7 @@ import { AiFillDelete } from 'react-icons/ai'
 
 const TableCar = () => {
 
-  const [carData, setCarData] = useState([{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},
-  {modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'},{modelo: 'renault',
-  ano: '2022',
-  preco: '20002'}]
-  )
+  const [carData, setCarData] = useState([])
 
   const fetchData = () => {
     api.get('/carros').then((response) => setCarData(response.data))
